@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.tele2demo.presentaion.LoginPageFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_login_page">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.tele2demo.presentaion.BranchFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_salon">
+        <action
+            android:id="@+id/action_SecondFragment_to_barcodeFragment"
+            app:destination="@id/barcodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/barcodeFragment"
+        android:name="com.example.tele2demo.presentaion.BarcodeFragment"
+        android:label="fragment_barcode"
+        tools:layout="@layout/fragment_barcode" >
+        <action
+            android:id="@+id/action_barcodeFragment_to_confirmDeviceFragment"
+            app:destination="@id/confirmDeviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmDeviceFragment"
+        android:name="com.example.tele2demo.presentaion.ConfirmDeviceFragment"
+        android:label="fragment_confirm_device"
+        tools:layout="@layout/fragment_confirm_device" >
+        <argument
+            android:name="deviceId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_confirmDeviceFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.tele2demo.presentaion.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+</navigation>

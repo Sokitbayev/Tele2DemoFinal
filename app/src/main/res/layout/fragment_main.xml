@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".presentaion.MainFragment">
+
+    <TextView
+        android:id="@+id/ru_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="На русском"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kk_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16sp"
+        android:text="Казакша"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/ru_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/banner_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/img_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ru_btn" />
+
+    <TextView
+        android:id="@+id/device_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Samsung Galaxy S22 Ultra"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner_img" />
+
+    <TextView
+        android:id="@+id/device_sub_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="128GB Black"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/device_title"
+        app:layout_constraintTop_toBottomOf="@+id/device_title" />
+
+    <TextView
+        android:id="@+id/old_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_strike"
+        android:text="683 192 ₸"
+        android:textColor="#97979B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/device_title"
+        app:layout_constraintTop_toBottomOf="@+id/device_sub_title" />
+
+    <TextView
+        android:id="@+id/new_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="554 000 ₸"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/device_title"
+        app:layout_constraintTop_toBottomOf="@+id/old_price" />
+
+    <TextView
+        android:id="@+id/device_price_per_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/bg_price_per_month"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="23 000 ₸"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/device_title"
+        app:layout_constraintTop_toBottomOf="@+id/new_price" />
+
+    <TextView
+        android:id="@+id/months"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="x 24"
+        android:textColor="#97979B"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/device_price_per_month"
+        app:layout_constraintStart_toEndOf="@+id/device_price_per_month"
+        app:layout_constraintTop_toTopOf="@+id/device_price_per_month" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tariff_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/device_price_per_month">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_container_characterictics">
+
+            <ImageView
+                android:id="@+id/tariff_item_image1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toStartOf="@+id/tariff_item_image2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tariff_item_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/tariff_item_image1"
+                app:layout_constraintStart_toStartOf="@+id/tariff_item_image1"
+                app:layout_constraintTop_toBottomOf="@+id/tariff_item_image1" />
+
+            <ImageView
+                android:id="@+id/tariff_item_image2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toStartOf="@+id/tariff_item_image3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tariff_item_image1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tariff_item_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/tariff_item_image2"
+                app:layout_constraintStart_toStartOf="@+id/tariff_item_image2"
+                app:layout_constraintTop_toBottomOf="@+id/tariff_item_image2" />
+
+            <ImageView
+                android:id="@+id/tariff_item_image3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tariff_item_image2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tariff_item_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/tariff_item_image3"
+                app:layout_constraintStart_toStartOf="@+id/tariff_item_image3"
+                app:layout_constraintTop_toBottomOf="@+id/tariff_item_image3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/characteristics_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tariff_info_container">
+
+        <ImageView
+            android:id="@+id/characteristics_start_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_characteristics_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/characteristics_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Характеристики"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/characteristics_start_image"
+            app:layout_constraintStart_toEndOf="@+id/characteristics_start_image"
+            app:layout_constraintTop_toTopOf="@+id/characteristics_start_image" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/characteristics_title_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/characteristics_title_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:elevation="24dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_buy_btn"
+        android:text="Хочу купить"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textFontWeight="800"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/close_display"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/close_display"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/bg_btn"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        android:text="Свернуть экран"
+        android:textAllCaps="false"
+        android:textColor="@color/btn_color"
+        android:textFontWeight="800"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/need_help"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/bg_btn"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        android:text="Нужна помощь"
+        android:textAllCaps="false"
+        android:textColor="@color/btn_color"
+        android:textFontWeight="800"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
